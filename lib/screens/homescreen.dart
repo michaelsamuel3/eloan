@@ -32,10 +32,11 @@ class _HomescreenState extends State<Homescreen> {
           child: Container(
             height: MediaQuery.of(context).size.height,
             decoration: const BoxDecoration(
-              gradient: RadialGradient(colors: [
-                Color.fromARGB(255, 184, 206, 224),
-                Color.fromARGB(255, 190, 221, 242),
-              ], radius: 1),
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [Colors.blueGrey, Colors.white],
+              ),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -46,7 +47,7 @@ class _HomescreenState extends State<Homescreen> {
                 const Align(
                   child: Text(
                     "REGISTRATION",
-                    style: TextStyle(fontSize: 35, color: Colors.black,fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 40, color: Colors.black),
                     textAlign: TextAlign.center,
                   ),
                 ),
@@ -86,7 +87,7 @@ class _HomescreenState extends State<Homescreen> {
                     iconName: Icons.credit_score,
                     txtcontroller: cibilscore),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.05,
+                  height: MediaQuery.of(context).size.height * 0.02,
                 ),
                 MaterialButton(
                   onPressed: () {

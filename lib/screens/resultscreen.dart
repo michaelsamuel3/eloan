@@ -21,10 +21,11 @@ class _ResultscreenState extends State<Resultscreen> {
           child: Container(
             height: MediaQuery.of(context).size.height,
             decoration: const BoxDecoration(
-              gradient: RadialGradient(colors: [
-                Color.fromARGB(255, 184, 206, 224),
-                Color.fromARGB(255, 190, 221, 242),
-              ], radius: 1),
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [Colors.blueGrey, Colors.white],
+              ),
             ),
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -43,12 +44,12 @@ class _ResultscreenState extends State<Resultscreen> {
                       style: TextStyle(
                           fontSize: 30,
                           color: Colors.black,
-                          fontWeight: FontWeight.bold),
+                          fontStyle: FontStyle.normal),
                       textAlign: TextAlign.center,
                     ),
                   ),
                   SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.07,
+                    height: MediaQuery.of(context).size.height * 0.05,
                   ),
                   Center(
                     child: Container(
@@ -62,20 +63,16 @@ class _ResultscreenState extends State<Resultscreen> {
                     SizedBox(
                     height: MediaQuery.of(context).size.height * 0.04,
                   ),
-                  Center(
-                    child: Text(
-                      "AMOUNT ELIGIBLE:    ${amount.floor()}",
-                      style: const TextStyle(fontSize: 20),
-                    ),
+                  Text(
+                    "AMOUNT ELIGIBLE:    ${amount.ceil()}",
+                    style: const TextStyle(fontSize: 20),
                   ),
                   SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.03,
+                    height: MediaQuery.of(context).size.height * 0.04,
                   ),
-                  Center(
-                    child: Text(
-                      "EMI:     ${emi.floor()}",
-                      style: const TextStyle(fontSize: 20),
-                    ),
+                  Text(
+                    "EMI:     ${emi.ceil()}",
+                    style: const TextStyle(fontSize: 20),
                   ),
                 ]),
           ),

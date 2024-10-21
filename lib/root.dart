@@ -1,15 +1,16 @@
-import 'package:eloan/screens/homeloan.dart';
-import 'package:eloan/screens/homescreen.dart';
-import 'package:eloan/screens/loan1.dart';
-import 'package:eloan/screens/loan2.dart';
-import 'package:eloan/screens/login.dart';
-import 'package:eloan/screens/personalloan.dart';
-import 'package:eloan/screens/resultscreen.dart';
-import 'package:eloan/screens/signin.dart';
-import 'package:eloan/screens/splashscreen.dart';
-import 'package:eloan/utility/routes.dart';
-import 'package:eloan/widget/frgtpass.dart';
 import 'package:flutter/material.dart';
+
+import 'screens/homeloan.dart';
+import 'screens/homescreen.dart';
+import 'screens/loan1.dart';
+import 'screens/loan2.dart';
+import 'screens/login.dart';
+import 'screens/personalloan.dart';
+import 'screens/resultscreen.dart';
+import 'screens/signin.dart';
+import 'screens/splashscreen.dart';
+import 'utility/routes.dart';
+import 'widget/frgtpass.dart';
 
 class Root extends StatelessWidget {
   const Root({super.key});
@@ -29,7 +30,7 @@ class Root extends StatelessWidget {
           Routes.loanpage2: (context) => const Loanpage2(),
           Routes.homeloan: (context) => const HomeLoan(),
           Routes.personalloan: (context) => const PersonalLoan(),
-           Routes.resultscreen: (context) => const Resultscreen(),
+          Routes.resultscreen: (context) => const Resultscreen(),
         });
   }
 }

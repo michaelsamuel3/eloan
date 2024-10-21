@@ -20,24 +20,41 @@ class HomeLoan extends StatelessWidget {
           Center(
             child: Container(
               height: MediaQuery.of(context).size.height,
-             decoration: const BoxDecoration(
-              gradient: RadialGradient(colors: [
-                Color.fromARGB(255, 184, 206, 224),
-                Color.fromARGB(255, 190, 221, 242),
-              ], radius: 1),
-            ),
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [Colors.blueGrey, Colors.white],
+                ),
+              ),
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                   
-              
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.04,
+                    ),
+                    Icon(
+                      Icons.handshake_outlined,
+                      color: Colors.black,
+                      size: MediaQuery.of(context).size.height * 0.10,
+                    ),
+                    const Align(
+                      child: Text(
+                        "E-LOAN APP",
+                        style: TextStyle(
+                            fontSize: 30,
+                            color: Colors.black,
+                            fontStyle: FontStyle.normal),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.05,
                     ),
                     const Align(
                       child: Text(
                         "TENURES AVAILABLE",
-                        style: TextStyle(fontSize: 35, color: Colors.black,fontWeight: FontWeight.bold),
+                        style: TextStyle(fontSize: 35, color: Colors.black),
                         textAlign: TextAlign.center,
                       ),
                     ),

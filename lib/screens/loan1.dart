@@ -24,18 +24,37 @@ class _LoanpageState extends State<Loanpage1> {
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
             decoration: const BoxDecoration(
-              gradient: RadialGradient(colors: [
-                Color.fromARGB(255, 184, 206, 224),
-                Color.fromARGB(255, 190, 221, 242),
-              ], radius: 1),
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [Colors.blueGrey, Colors.white],
+              ),
             ),
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.05,
+                  ),
+                  Icon(
+                    Icons.handshake_outlined,
+                    color: Colors.black,
+                    size: MediaQuery.of(context).size.height * 0.15,
+                  ),
+                  const Align(
+                    child: Text(
+                      "E-LOAN",
+                      style: TextStyle(
+                          fontSize: 50,
+                          color: Colors.black,
+                          ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  SizedBox(
                     height: MediaQuery.of(context).size.height * 0.09,
                   ),
-                  const Text("LOAN AVAILABILITY",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                  const Text("LOAN AVAILABILITY",style: TextStyle(fontSize: 30),),
                     SizedBox(
                     height: MediaQuery.of(context).size.height * 0.10,
                   ),

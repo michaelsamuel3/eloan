@@ -17,7 +17,7 @@ class _SplashscreenState extends State<Splashscreen> {
         duration: 3000,
         splashIconSize: MediaQuery.of(context).size.height*0.7,
         splashTransition: SplashTransition.scaleTransition,
-        backgroundColor: Color.fromARGB(255, 169, 182, 252),
+        backgroundColor: Colors.blueGrey,
         splash:  Column(
           children: [
             SizedBox(
@@ -27,7 +27,7 @@ class _SplashscreenState extends State<Splashscreen> {
             color:Colors.black,
             size: MediaQuery.of(context).size.height*0.15,),
              Text("E-LOAN APP",
-            style:TextStyle(color: Colors.black,fontWeight: FontWeight.bold,
+            style:TextStyle(color: Colors.black,fontWeight: FontWeight.normal,
             fontSize: MediaQuery.of(context).size.height*0.05,fontStyle: FontStyle.normal),textAlign: TextAlign.center,),
             
 
